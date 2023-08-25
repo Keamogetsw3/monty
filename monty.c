@@ -1,5 +1,7 @@
 #include "monty.h"
 
+/* Global stack pointer */
+stack_t *stack = NULL;
 
 /**
  * main - The entry point for the Monty program.
