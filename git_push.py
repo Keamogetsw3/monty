@@ -32,7 +32,7 @@ if not os.path.exists(file_path):
 # Git commands to add, commit, and push
 try:
     subprocess.run(["git", "add", "."])  # Add all modified files
-    subprocess.run(["git", "commit", "-m", "Auto commit"])  # Use a default commit message
+    subprocess.run(["git", "commit", "-m", "Files added"])  # Use a default commit message
     commit_message = extract_commit_message(file_path)
     subprocess.run(["git", "push", "origin", "main"])  # Change 'main' to your branch name
     print("Commit and push successful!")
