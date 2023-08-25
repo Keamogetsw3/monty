@@ -17,6 +17,19 @@ int main(int argc, char *argv[])
         fprintf(stderr, "Usage: monty file\n");
         exit(EXIT_FAILURE);
     }
-    return (0)
+
+    FILE *file = fopen(argv[1], "r");
+    if (file == NULL)
+      {
+	fprintf(stderr, "Error: cant open file %s\n", argv[1]);
+	exit(EXIT_FAILURE);
+      }
+
+    char line[256];
+    while (getline(line, sizeof(line), file));
+
+    fclose(file);
+    
+    return (0);
 
 }
